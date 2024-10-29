@@ -1,9 +1,12 @@
 import React from 'react';
+import './index.css';
+import Navbar from './Navbar.js';
 
 function HomePage() {
   return (
     <div>
-      <h1 class="header">DAM Creative Tools</h1>
+      <Navbar />
+      <h1 class="header">Welcome to ____!</h1>
       <p>Homepage</p>
     </div>
   );
