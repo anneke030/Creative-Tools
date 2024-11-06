@@ -2,7 +2,7 @@ version: '3.8'
 services:
   client:
     build:
-      context: ./my-app
+      context: ./frontend/ui-ux
     ports:
       - "3000:3000"
     environment:
