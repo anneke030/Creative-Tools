@@ -6,8 +6,13 @@ function HomePage() {
   return (
     <div>
       <Navbar />
-      <h1 class="header">Welcome to ____!</h1>
-      <p>Homepage</p>
+      {/* Blue Rectangle */}
+      <div className="blue-rectangle"></div>
+      <h1 className="welcome">welcome!</h1> {/* Corrected class attribute */}
+      <p className="slogan">Connect with the World of Design</p>
+      <p className="text">get started today!</p>
+      <p className="bullets">• connect with other designers</p>
+      <p className="bullets">• description of website</p>
     </div>
   );
 }

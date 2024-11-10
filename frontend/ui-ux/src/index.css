@@ -1,11 +1,58 @@
-* {
-  background-color: white;
+
+.parent-container {
+  display: flex; /* if using flexbox */
+  justify-content: flex-start; /* Ensure children are aligned to the left */
 }
 
-.header {
+.welcome {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(37, 37, 37);
-  text-align: center;
+  text-align: left;
   font-size: 60px;
+  background-color: #E5F5F0;
+  display: block; 
+  margin-left: 300px;
+  
+  
+}
+
+.slogan {
+  font-family: Arial;
+  color: rgb(93, 93, 93);
+  text-align: left;
+  font-size: 40px;
+  background-color: #E5F5F0;
+  display: block; 
+  margin-left: 300px;
+  padding: 0;
 }
  
+.blue-rectangle {
+  background-color: #E5F5F0; /* Blue background */
+  width: calc(100% - 200px); /* Full width minus navbar width */
+  height: 250px; /* Set height of the blue rectangle */
+  position: absolute;
+  top: 0; /* Start from the top */
+  left: 200px; /* Start after the navbar */
+  z-index: -1; /* Ensure it stays under the navbar */
+}
+
+.text{
+  font-family: Arial;
+  color: rgb(37, 37, 37);
+  text-align: left;
+  font-size: 40px;
+  display: block; 
+  margin-left: 300px;
+  margin-top: 100px;
+}
+
+.bullets{
+  font-family: Arial;
+  color: rgb(93, 93, 93);
+  text-align: left;
+  font-size: 25px;
+  display: block; 
+  margin-left: 300px;
+  margin-top: -10px;
+}
