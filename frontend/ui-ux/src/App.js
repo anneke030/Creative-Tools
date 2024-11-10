@@ -1,28 +1,10 @@
-import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
 import Login from './login';
 import Navbar from './Navbar';
 import HomePage from './HomePage';
 
-
-/*function App() {
-  return (
-    <div>
-      <Login />
-      
-    </div>
-  );
-}
-
-function HomePage() {
-  return(
-    <div>
-      <Navbar />
-      <HomePage />
-    </div>
-  )
-}*/
 
 const App = () => {
   return (

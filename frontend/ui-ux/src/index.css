@@ -70,3 +70,19 @@
   margin-top: -10px;
   line-height: 48px;
 }
+
+.circle {
+  position: fixed;
+  top: 20px;  /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  width: 60px; /* Width of the circle */
+  height: 60px; /* Height of the circle */
+  background-color: #C8A1E0; 
+  border-radius: 50%; /* Make it round */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+
