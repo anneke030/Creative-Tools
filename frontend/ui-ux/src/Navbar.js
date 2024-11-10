@@ -25,16 +25,6 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        
-        {/*<div className="navbar-right">
-          <a href="/cart" className="cart-icon">
-            <i className="fas fa-shopping-cart"></i>
-            <span className="cart-count"></span>
-          </a>
-          <a href="/account" className="user-icon">
-            <i className="fas fa-user"></i>
-          </a>
-        </div>*/}
       </nav>
     </>
   );

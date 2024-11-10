@@ -1,5 +1,6 @@
 
 .navbar {
+  font-family: 'Poppins';
   display: flex;
   flex-direction: column; 
   background-color: #C8A1E0; 
@@ -13,13 +14,13 @@
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
-
 .navbar-left .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 500;
   color: black;
   text-decoration: none;
-  margin-bottom: 1rem;
+  padding: 10px;
+  line-height: 72px;
   background-color: #C8A1E0;
 }
 .navbar-left {
@@ -27,6 +28,7 @@
 }
 
 .navbar-center .nav-links {
+  font-size: 20px;
   list-style-type: none;
   display: flex;
   flex-direction: column; 
@@ -57,7 +59,6 @@
 .nav-links {
   background-color:transparent;
 }
-
 
 .navbar-right .cart-icon,
 .navbar-right .user-icon {
