@@ -59,7 +59,7 @@
 }
 
 
-/*.navbar-right .cart-icon,
+.navbar-right .cart-icon,
 .navbar-right .user-icon {
   color: black;
   text-decoration: none;
@@ -76,4 +76,4 @@
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
-}*/
+}
