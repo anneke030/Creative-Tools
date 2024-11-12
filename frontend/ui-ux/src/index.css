@@ -17,7 +17,7 @@
   background-color: #E5F5F0;
   display: block; 
   margin-left: 300px;
-  
+  margin-top: 12px;
   
 }
 
@@ -31,7 +31,7 @@
   background-color: #E5F5F0;
   display: block; 
   margin-left: 300px;
-  margin-top: -36px;
+  
   padding: 0;
 }
  
@@ -54,7 +54,7 @@
   line-height: 96px;
   display: block; 
   margin-left: 300px;
-  margin-top: 144px;
+  margin-top: 160px;
 }
 
 .bullets{
@@ -67,7 +67,7 @@
   line-height: 96px;
   display: block; 
   margin-left: 300px;
-  margin-top: -10px;
+  margin-top: 12px;
   line-height: 48px;
 }
 
@@ -84,9 +84,5 @@
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
-<<<<<<< HEAD
 }
 
-=======
-}
->>>>>>> 0784b6b2c2ffee6e2bf28336f8eeeb12386f39d2
