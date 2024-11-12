@@ -37,8 +37,8 @@ const ProfilePage = () => {
 
       <div className="profile-details">
         <div className="profile-field">
-          <label>Name:</label>
-          <input
+          <label className='name'>Name:</label>
+          <input className='name-input'
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
