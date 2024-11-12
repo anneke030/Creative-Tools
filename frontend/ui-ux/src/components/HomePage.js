@@ -1,13 +1,23 @@
 import React from 'react';
-import './index.css';
-import Navbar from './components/Navbar.js';
+import { Link } from 'react-router-dom';
+import '../index.css';
+import Navbar from './Navbar.js';
 
 function HomePage() {
   return (
     <div>
       <Navbar />
-      <h1 class="header">Welcome to ____!</h1>
-      <p>Homepage</p>
+      {/* Blue Rectangle */}
+      <div className="blue-rectangle"></div>
+      <h1 className="welcome">welcome!</h1> {/* Corrected class attribute */}
+      <p className="slogan">Connect with the World of Design</p>
+      <p className="text">get started today!</p>
+      <p className="bullets">• connect with other designers</p>
+      <p className="bullets">• description of website</p>
+       {/* Circle Button */}
+       <Link to="/profile">
+        <div className="circle"></div>
+      </Link>
     </div>
   );
 }
