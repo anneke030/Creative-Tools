@@ -4,8 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 
-
-
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -21,12 +19,16 @@ const Login = () => {
     };
 
     return (
+     
         <div>
-            <h2>Login</h2>
+            <div class="colored-box">
+            <h1 className="header">sign in</h1>
+            <p>Connect with the World of Design</p>
+            <br></br>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>
-                        Username:
+                        Username: 
                         <input
                             type="text"
                             value={username}
@@ -37,7 +39,7 @@ const Login = () => {
                 </div>
                 <div>
                     <label>
-                        Password:
+                        Password: 
                         <input
                             type="password"
                             value={password}
@@ -48,6 +50,9 @@ const Login = () => {
                 </div>
                 <button type="submit">Login</button>
             </form>
+            <br></br>
+            <br></br>
+            </div>
         </div>
     );
 };

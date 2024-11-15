@@ -1,8 +1,33 @@
+/* Import multiple weights of Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
 
   .header {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins';
     color: rgb(37, 37, 37);
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 44px;
+    display: flex;
+    justify-content: left; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0; /* Remove default body margin */
   }
    
+  .colored-box {
+    font-family: 'Poppins';
+    background-color: #E5F5F0; /* Set the background color of the rectangle */
+    color: rgb(93, 93, 93);
+    padding: 20px; /* Add some space inside the box */
+    border-radius: 20px; /* Optional: Add rounded corners */
+    width: fit-content; /* Adjust width based on the content */
+    height: fit-content;
+    text-align: left;
+  
+    /* Centering the box itself */
+    position: absolute; /* Position element relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height */
+  }
+  
