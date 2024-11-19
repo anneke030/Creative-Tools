@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import './Navbar.css';
-
 const Navbar = () => {
   return (
     <>
@@ -10,14 +9,23 @@ const Navbar = () => {
           <a href="/home" className="logo">
             Menu
           </a>
+          <a href="/" className="logo">
+            ripple
+          </a>
         </div>
         <div className="navbar-center">
           <ul className="nav-links">
             <li>
-              <Link to="/profile-matching">Profile Matching</Link> {/* Use Link for routing */}
+              <Link to="/home">home</Link>
             </li>
             <li>
-              <Link to="/explore">Explore</Link>
+              <Link to="/search">search</Link>
+            </li>
+            <li>
+              <Link to="/explore">explore</Link>
+            </li>
+            <li>
+              <Link to="/profileMatching">match</Link>
             </li>
             <li>
               <Link to="/about-us">About Us</Link>
@@ -28,5 +36,4 @@ const Navbar = () => {
     </>
   );
 };
-
 export default Navbar;
