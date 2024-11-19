@@ -1,27 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import './Navbar.css';
 
 const Navbar = () => {
   return (
     <>
-      
-
       <nav className="navbar">
         <div className="navbar-left">
-          <a href="/" className="logo">
+          <a href="/home" className="logo">
             Menu
           </a>
         </div>
         <div className="navbar-center">
           <ul className="nav-links">
             <li>
-              <a href="/products">Profile Matching</a>
+              <Link to="/profile-matching">Profile Matching</Link> {/* Use Link for routing */}
             </li>
             <li>
-              <a href="/about">Explore</a>
+              <Link to="/explore">Explore</Link>
             </li>
             <li>
-              <a href="/contact">About Us</a>
+              <Link to="/about-us">About Us</Link>
             </li>
           </ul>
         </div>

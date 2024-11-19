@@ -1,29 +1,10 @@
-import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './components/HomePage';
+import HomePage from './HomePage';
 import Login from './components/Login';
 import Profile from './components/Profile';
+import ProfileMatching from './components/profileMatching';  
 
-
-
-/*function App() {
-  return (
-    <div>
-      <Login />
-      
-    </div>
-  );
-}
-
-function HomePage() {
-  return(
-    <div>
-      <Navbar />
-      <HomePage />
-    </div>
-  )
-}*/
 
 const App = () => {
   return (
@@ -31,6 +12,7 @@ const App = () => {
           <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/home" element={<HomePage />} />  {/* Use HomePage here */}
+              <Route path="/profile-matching" element={<ProfileMatching />} />
               <Route path="/profile" element={<Profile />} />
           </Routes>
       </Router>
