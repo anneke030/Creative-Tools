@@ -1,7 +1,7 @@
 /* Styles for the card component */
 .card {
     background-color: #E0C4F2;
-    border-radius: 3px;
+    border-radius: 20px;
     width: 100%;
     height: 100%;
     cursor: pointer;

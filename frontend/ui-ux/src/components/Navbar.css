@@ -87,3 +87,39 @@
   top: -0.5rem;
   right: -0.5rem;
 }
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #E8D7F3;
+  align-items: flex-start;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px; 
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  justify-content: space-between; /* Ensures bottom links are at the bottom */
+}
+
+.navbar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd; /* Optional divider */
+}
+
+.bottom-link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.bottom-link:hover {
+  color: #674188;
+}
