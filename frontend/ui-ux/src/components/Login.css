@@ -16,9 +16,9 @@
    
   .colored-box {
     font-family: 'Poppins';
-    background-color: #E5F5F0; /* Set the background color of the rectangle */
+    background-color: #FFF3DF; 
     color: rgb(93, 93, 93);
-    padding: 20px; /* Add some space inside the box */
+    padding: 40px; /* Add some space inside the box */
     border-radius: 20px; /* Optional: Add rounded corners */
     width: fit-content; /* Adjust width based on the content */
     height: fit-content;

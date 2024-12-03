@@ -1,0 +1,68 @@
+/* Styles for the app container */
+.app-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Styles for the card wrapper */
+  .card-wrapper {
+    position: relative;
+    width: 400px;
+    height: 500px;
+  }
+  
+  /* Styles for the action buttons container */
+  .actions-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .button-left {
+    position: absolute;
+    left: -80px;  /* Increased the distance from the left */
+    transform: translateX(-100%);
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    font-size: 32px;  /* Increase the font size */
+    border: 2px solid black;  /* Black border */
+    background-color: transparent;  /* Transparent background */
+    color: black;  /* Black text color */
+    cursor: pointer;  /* Change cursor to pointer */
+  }
+  
+  
+  .button-right {
+    position: absolute;
+    right: -300px;  /* Increased the distance from the left */
+    transform: translateX(-100%);
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    font-size: 32px;  /* Increase the font size */
+    border: 2px solid black;  /* Black border */
+    background-color: transparent;  /* Transparent background */
+    color: black;  /* Black text color */
+    cursor: pointer;  /* Change cursor to pointer */
+  }
+  
+  .profile-image {
+      width: 250px;    /* Adjust the width of the image */
+      height: 300px;   /* Adjust the height of the image */
+      border-radius: 120px;  /* Maintain the circular shape */
+      object-fit: cover;  /* Ensures the image covers the area without stretching */
+  }
+  
+  .card-content {
+    text-align: center;
+  }
