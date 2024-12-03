@@ -1,135 +1,165 @@
 /* Container Styles */
+* {
+    font-family: 'Poppins';
+}
 .messaging-container {
     display: flex;
     height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     background-color: #F8F8F8;
-  }
-  
-  /* Navbar Styles */
-  .messaging-navbar {
+}
+
+/* Navbar Styles */
+.messenger-navbar {
     width: 250px;
-    background-color: #E8D7F3;
+    background: #e8d7f3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .messaging-navbar .logo {
-    font-size: 24px;
+}
+
+.messenger-navbar .logo {
+    font-size: 28px;
+    color: black; /* Set logo text color to black */
     font-weight: bold;
-    color: black;
     text-decoration: none;
-    margin-bottom: 1rem;
-  }
-  
-  .messaging-navbar .nav-links {
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.messenger-navbar .logo:hover {
+    color: #E8D7F3; /* Logo hover effect (kept the original color for hover) */
+}
+
+.messenger-navbar .nav-links {
     list-style: none;
     padding: 0;
-  }
-  
-  .messaging-navbar .nav-links li {
     margin-bottom: 1rem;
-  }
-  
-  .messaging-navbar .nav-links a {
+}
+
+.messenger-navbar .nav-links li {
+    margin-bottom: 1rem;
+}
+
+.messenger-navbar .nav-links a {
     text-decoration: none;
-    color: black;
-    font-size: 16px;
-  }
-  
-  .messaging-navbar .navbar-bottom {
-    border-top: 1px solid #ddd;
+    color: black; /* Set link text color to black */
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.messenger-navbar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #674188; /* Change hover color for links */
+}
+
+.messenger-navbar .navbar-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 1rem;
-  }
-  
-  .messaging-navbar .navbar-bottom a {
+}
+
+.messenger-navbar .navbar-bottom a {
     text-decoration: none;
-    color: black;
+    color: black; /* Set bottom link text color to black */
     font-size: 16px;
     display: block;
     margin-bottom: 0.5rem;
-  }
-  
-  /* Main Messaging Area */
-  .messaging-main {
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.messenger-navbar .navbar-bottom a:hover {
+    color: #674188; /* Hover effect for bottom links */
+}
+
+
+/* Main Messaging Area */
+.messaging-main {
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Header */
-  .messaging-header {
+}
+
+/* Header */
+.messaging-header {
     display: flex;
     align-items: center;
     padding: 1rem;
     border-bottom: 1px solid #ddd;
     background-color: #E8D7F3;
-  }
-  
-  .messaging-header .profile-picture {
+}
+
+.messaging-header .profile-picture {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 50%; /* Makes the image round */
     margin-right: 1rem;
-  }
-  
-  .messaging-header .username {
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-  }
-  
-  /* Message Window */
-  .message-window {
+}
+
+/* Message Window */
+.message-window {
     flex: 1;
     padding: 1rem;
     overflow-y: auto;
     background-color: #F8F8F8;
-  }
-  
-  .message {
+}
+
+.message {
     max-width: 70%;
     padding: 0.8rem;
     margin: 0.5rem 0;
     border-radius: 10px;
     font-size: 16px;
-  }
-  
-  .message.received {
+    position: relative;
+}
+
+.message.received {
     background-color: #E8D7F3;
     color: black;
     align-self: flex-start;
-  }
-  
-  .message.sent {
+}
+
+.message.sent {
     background-color: #674188;
     color: white;
     align-self: flex-end;
-  }
-  
-  /* Input Bar */
-  .message-input-bar {
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #888;
+    position: absolute;
+    bottom: -20px; /* Place timestamp below the message */
+    right: 0;
+}
+
+/* Input Bar */
+.message-input-bar {
     display: flex;
     padding: 0.5rem;
     border-top: 1px solid #ddd;
     background-color: #F8F8F8;
-  }
-  
-  .message-input {
+}
+
+.message-input {
     flex: 1;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 0.5rem;
     font-size: 16px;
-  }
-  
-  .send-button {
+}
+
+.send-button {
     background-color: #674188;
     color: white;
     border: none;
@@ -138,9 +168,8 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .send-button:hover {
+}
+
+.send-button:hover {
     background-color: #563171;
-  }
-  
+}

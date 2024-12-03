@@ -135,7 +135,7 @@
 .slider-container {
   display: flex;
   justify-content: center;
-  margin: 20px 0; /* Adds spacing between the slider and card */
+  margin: 20px 0;
 }
 
 .slider-option {
