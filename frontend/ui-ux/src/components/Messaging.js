@@ -11,12 +11,12 @@ function Messaging() {
     <div className="messaging-container">
       {/* Custom Navbar */}
       <div className="messenger-navbar">
-        <a href="/" className="logo">ripple</a>
+        <a href="/home" className="logo">ripple</a>
         <ul className="nav-links">
-          <li><a href="#messages">Messages</a></li>
-          <li><a href="#contacts">Contacts</a></li>
-          <li><a href="#groups">Groups</a></li>
-          <li><a href="#settings">Settings</a></li>
+          <li><a href="#messages">messages</a></li>
+          <li><a href="#contacts">interviews</a></li>
+          <li><a href="#groups">tasks</a></li>
+          <li><a href="#settings">history</a></li>
         </ul>
         <div className="navbar-bottom">
           <a href="#profile">Profile</a>

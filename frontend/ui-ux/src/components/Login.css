@@ -1,33 +1,106 @@
-/* Import multiple weights of Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+/* Container for the entire login page */
+.login-container {
+  display: flex;
+  gap: 30px; /* Adds spacing between the login and sign-up sections */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F8F8F8;
+}
 
-  .header {
-    font-family: 'Poppins';
-    color: rgb(37, 37, 37);
-    text-align: center;
-    font-size: 40px;
-    font-weight: 400;
-    margin-bottom: 44px;
-    display: flex;
-    justify-content: left; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin: 0; /* Remove default body margin */
-  }
-   
-  .colored-box {
-    font-family: 'Poppins';
-    background-color: #FFF3DF; 
-    color: rgb(93, 93, 93);
-    padding: 40px; /* Add some space inside the box */
-    border-radius: 20px; /* Optional: Add rounded corners */
-    width: fit-content; /* Adjust width based on the content */
-    height: fit-content;
-    text-align: left;
-  
-    /* Centering the box itself */
-    position: absolute; /* Position element relative to the viewport */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height */
-  }
-  
+/* Sign-In Box */
+.colored-box {
+  background-color: #FFF3DF;
+  padding: 20px; /* Reduced padding */
+  border-radius: 12px; /* Slightly smaller corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 220px; /* Reduced width */
+  text-align: center;
+}
+
+.colored-box h1 {
+  font-size: 22px; /* Smaller font size */
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.colored-box p {
+  font-size: 14px; /* Smaller font size for the description */
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.colored-box label {
+  font-size: 12px; /* Reduced label size */
+  display: block;
+  margin-bottom: 5px;
+}
+
+.colored-box input {
+  width: 100%;
+  padding: 6px; /* Smaller padding */
+  font-size: 12px; /* Smaller text size */
+  margin-bottom: 10px; /* Reduced margin between inputs */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.colored-box button {
+  background-color: #674188;
+  color: white;
+  padding: 6px 12px; /* Smaller button size */
+  font-size: 12px; /* Smaller text size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.colored-box button:hover {
+  background-color: #563171;
+}
+
+/* Sign-Up Container */
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Smaller gap between the sign-up boxes */
+}
+
+/* Sign-Up Boxes */
+.sign-up-box {
+  background-color: #E8D7F3;
+  padding: 20px; /* Reduced padding */
+  border-radius: 12px; /* Slightly smaller corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 220px; /* Reduced width */
+  text-align: center;
+}
+
+.sign-up-box h2 {
+  font-size: 20px; /* Slightly smaller font size */
+  margin-bottom: 10px; /* Reduced margin */
+  color: #333;
+}
+
+.sign-up-box input {
+  width: 100%;
+  padding: 6px; /* Smaller padding */
+  font-size: 12px; /* Smaller text size */
+  margin-bottom: 10px; /* Reduced margin */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.sign-up-box button {
+  background-color: #674188;
+  color: white;
+  padding: 6px 12px; /* Smaller button size */
+  font-size: 12px; /* Smaller text size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sign-up-box button:hover {
+  background-color: #563171;
+}
