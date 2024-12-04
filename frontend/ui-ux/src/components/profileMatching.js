@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Card from "./Card";
 import Button from "./Button";
@@ -30,108 +31,77 @@ class App extends Component {
     matchMode: "people", // Track current match mode
   };
 
-  handleNext = () => {
-    this.setState(({ currentIndex, cards }) => ({
-      currentIndex: (currentIndex + 1) % cards.length,
-      animationDirection: "swipe-left",
-    }));
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
+    setAnimationDirection("swipe-right");
   };
 
-  handlePrevious = () => {
-    this.setState(({ currentIndex, cards }) => ({
-      currentIndex: (currentIndex - 1 + cards.length) % cards.length,
-      animationDirection: "swipe-right",
-    }));
+  const handleCheck = () => {
+    // Navigate to /messaging
+    navigate("/messaging");
   };
 
-  handleCheck = () => {
-    alert("Matched!");
-  };
-
-  handleReject = () => {
+  const handleReject = () => {
     alert("Bye bye...");
   };
 
-  handleAnimationEnd = () => {
-    this.setState({ animationDirection: "" });
+  const handleAnimationEnd = () => {
+    setAnimationDirection("");
   };
 
-  handleToggleMatchMode = (mode) => {
-    this.setState({ matchMode: mode });
-  };
+  const currentCard = cards[currentIndex];
 
-  render() {
-    const { cards, currentIndex, animationDirection, matchMode } = this.state;
-    const currentCard = cards[currentIndex];
+  return (
+    <div className="app-container">
+      <Navbar />
 
-    return (
-      <div className="app-container">
-        <Navbar />
-        
-        {/* Slider */}
-        <div className="slider-container">
-          <button
-            className={`slider-option ${matchMode === "people" ? "active" : ""}`}
-            onClick={() => this.handleToggleMatchMode("people")}
+      {/* Card Wrapper */}
+      <div className="card-wrapper">
+        {cards.length > 0 && (
+          <div
+            className={`card-container ${animationDirection}`}
+            onAnimationEnd={handleAnimationEnd}
           >
-            Match with People
-          </button>
-          <button
-            className={`slider-option ${matchMode === "projects" ? "active" : ""}`}
-            onClick={() => this.handleToggleMatchMode("projects")}
-          >
-            Match with Projects
-          </button>
-        </div>
-        
-        {/* Card Wrapper */}
-        <div className="card-wrapper">
-          {cards.length > 0 && (
-            <div
-              className={`card-container ${animationDirection}`}
-              onAnimationEnd={this.handleAnimationEnd}
-            >
-              <Card>
-                <div className="card-content">
-                  <img
-                    src={currentCard.image}
-                    alt={currentCard.name}
-                    className="profile-image"
-                  />
-                  <h3>{currentCard.name}</h3>
-                  <p>{currentCard.role}</p>
-                  <div className="action-buttons">
-                    <button
-                      className="checkmark-button"
-                      onClick={this.handleCheck}
-                    >
-                      ✔
-                    </button>
-                    <button
-                      className="x-button"
-                      onClick={this.handleReject}
-                    >
-                      ✖
-                    </button>
-                  </div>
+            <Card>
+              <div className="card-content">
+                <img
+                  src={currentCard.image}
+                  alt={currentCard.name}
+                  className="profile-image"
+                />
+                <h3>{currentCard.name}</h3>
+                <p>{currentCard.role}</p>
+                <div className="action-buttons">
+                  <button
+                    className="checkmark-button"
+                    onClick={handleCheck}
+                  >
+                    ✔
+                  </button>
+                  <button
+                    className="x-button"
+                    onClick={handleReject}
+                  >
+                    ✖
+                  </button>
                 </div>
-              </Card>
-            </div>
-          )}
-          {cards.length <= 0 && <Card>No more profiles</Card>}
-
-          <div className="actions-container">
-            <Button className="button-left" onClick={this.handlePrevious}>
-              ←
-            </Button>
-            <Button className="button-right" onClick={this.handleNext}>
-              →
-            </Button>
+              </div>
+            </Card>
           </div>
+        )}
+        {cards.length <= 0 && <Card>No more profiles</Card>}
+
+        <div className="actions-container">
+          <Button className="button-left" onClick={handlePrevious}>
+            ←
+          </Button>
+          <Button className="button-right" onClick={handleNext}>
+            →
+          </Button>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;

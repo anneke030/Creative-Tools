@@ -2,32 +2,25 @@ import React from "react";
 import './Messaging.css';
 
 function Messaging() {
+  const getCurrentTime = () => {
+    const now = new Date();
+    return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  };
+
   return (
     <div className="messaging-container">
-      {/* Navbar */}
-      <div className="messaging-navbar">
-        <div className="navbar-top">
-          <a href="/" className="logo">
-            ripple
-          </a>
-          <ul className="nav-links">
-            <li>
-              <a href="#option1">Option 1</a>
-            </li>
-            <li>
-              <a href="#option2">Option 2</a>
-            </li>
-            <li>
-              <a href="#option3">Option 3</a>
-            </li>
-            <li>
-              <a href="#option4">Option 4</a>
-            </li>
-          </ul>
-        </div>
+      {/* Custom Navbar */}
+      <div className="messenger-navbar">
+        <a href="/home" className="logo">ripple</a>
+        <ul className="nav-links">
+          <li><a href="#messages">messages</a></li>
+          <li><a href="#contacts">interviews</a></li>
+          <li><a href="#groups">tasks</a></li>
+          <li><a href="#settings">history</a></li>
+        </ul>
         <div className="navbar-bottom">
           <a href="#profile">Profile</a>
-          <a href="#more">More</a>
+          <a href="#logout">Logout</a>
         </div>
       </div>
 
@@ -47,19 +40,17 @@ function Messaging() {
         <div className="message-window">
           <div className="message received">
             <p>Hello! How are you?</p>
+            <span className="timestamp">{getCurrentTime()}</span>
           </div>
           <div className="message sent">
             <p>I'm good, thank you! What about you?</p>
+            <span className="timestamp">{getCurrentTime()}</span>
           </div>
         </div>
 
         {/* Input Bar */}
         <div className="message-input-bar">
-          <input
-            type="text"
-            placeholder="Type a message..."
-            className="message-input"
-          />
+          <input type="text" placeholder="Type a message..." className="message-input" />
           <button className="send-button">Send</button>
         </div>
       </div>

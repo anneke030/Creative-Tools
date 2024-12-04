@@ -23,6 +23,9 @@ const Navbar = () => {
               <Link to="/explore">explore</Link>
             </li>
             <li>
+              <Link to="/rewards">rewards</Link>
+            </li>
+            <li>
               <Link to="/profileMatching">match</Link>
             </li>
             <li>
