@@ -3,14 +3,27 @@ import Navbar from "./Navbar";
 import Card from "./Card";
 import Button from "./Button";
 import "../App.css";
+import anikaImage from "../images/Anika.png";
+import sophiaImage from "../images/Sophia.png";
+import irisImage from "../images/Iris.png";
+import annekaImage from "../images/Anneka.png";
+import raafayImage from "../images/Raafay.png";
+import radhikaImage from "../images/Radhika.png";
+import jamesImage from "../images/James.png";
+import nagarajImage from "../images/Nagaraj.png";
+
 
 class App extends Component {
   state = {
     cards: [
-      { name: "Sophie Williams", role: "UI/UX Designer", image: "https://randomuser.me/api/portraits/women/5.jpg" },
-      { name: "Michael Green", role: "Graphic Designer", image: "https://randomuser.me/api/portraits/men/7.jpg" },
-      { name: "Laura James", role: "Product Designer", image: "https://randomuser.me/api/portraits/women/8.jpg" },
-      { name: "Chris Howard", role: "Web Designer", image: "https://randomuser.me/api/portraits/men/9.jpg" }
+      { name: "Anneke Anderson", role: "UI/UX Designer", image: annekaImage },
+      { name: "Anika Ratakonda", role: "Graphic Designer", image: anikaImage },
+      { name: "Raafay Shehzad", role: "Product Designer", image: raafayImage },
+      { name: "Iris Wang", role: "Web Designer", image: irisImage },
+      { name: "Radhika Patwardhan", role: "UI/UX Designer", image: radhikaImage },
+      { name: "Sophia Tran", role: "UI/UX Designer", image: sophiaImage },
+      { name: "James Featherston", role: "Web Designer", image: jamesImage },
+      { name: "Nagaraj Veerappan", role: "Web Designer", image: nagarajImage }
     ],
     currentIndex: 0,
     animationDirection: "",
