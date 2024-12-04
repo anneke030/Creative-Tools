@@ -13,22 +13,26 @@ import radhikaImage from "../images/Radhika.png";
 import jamesImage from "../images/James.png";
 import nagarajImage from "../images/Nagaraj.png";
 
+const App = () => {
+  const navigate = useNavigate(); // useNavigate hook for navigation
 
-class App extends Component {
-  state = {
-    cards: [
-      { name: "Anneke Anderson", role: "UI/UX Designer", image: annekaImage },
-      { name: "Anika Ratakonda", role: "Graphic Designer", image: anikaImage },
-      { name: "Raafay Shehzad", role: "Product Designer", image: raafayImage },
-      { name: "Iris Wang", role: "Web Designer", image: irisImage },
-      { name: "Radhika Patwardhan", role: "UI/UX Designer", image: radhikaImage },
-      { name: "Sophia Tran", role: "UI/UX Designer", image: sophiaImage },
-      { name: "James Featherston", role: "Web Designer", image: jamesImage },
-      { name: "Nagaraj Veerappan", role: "Web Designer", image: nagarajImage }
-    ],
-    currentIndex: 0,
-    animationDirection: "",
-    matchMode: "people", // Track current match mode
+  const [cards, setCards] = useState([
+    { name: "Anneke Anderson", role: "UI/UX Designer", image: annekaImage },
+    { name: "Anika Ratakonda", role: "Graphic Designer", image: anikaImage },
+    { name: "Raafay Shehzad", role: "Product Designer", image: raafayImage },
+    { name: "Iris Wang", role: "Web Designer", image: irisImage },
+    { name: "Radhika Patwardhan", role: "UI/UX Designer", image: radhikaImage },
+    { name: "Sophia Tran", role: "UI/UX Designer", image: sophiaImage },
+    { name: "James Featherston", role: "Web Designer", image: jamesImage },
+    { name: "Nagaraj Veerappan", role: "Web Designer", image: nagarajImage }
+  ]);
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animationDirection, setAnimationDirection] = useState("");
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
+    setAnimationDirection("swipe-left");
   };
 
   const handlePrevious = () => {
