@@ -4,12 +4,13 @@ import Navbar from "./Navbar";
 import Card from "./Card";
 import Button from "./Button";
 import "../App.css";
+import annekeImage from "../assets/anneke_professional.jpg";
 
 const App = () => {
   const navigate = useNavigate(); // useNavigate hook for navigation
 
   const [cards, setCards] = useState([
-    { name: "Sophie Williams", role: "UI/UX Designer", image: "https://randomuser.me/api/portraits/women/5.jpg" },
+    { name: "Anneke Anderson", role: "UI/UX Designer", image: annekeImage },
     { name: "Michael Green", role: "Graphic Designer", image: "https://randomuser.me/api/portraits/men/7.jpg" },
     { name: "Laura James", role: "Product Designer", image: "https://randomuser.me/api/portraits/women/8.jpg" },
     { name: "Chris Howard", role: "Web Designer", image: "https://randomuser.me/api/portraits/men/9.jpg" }

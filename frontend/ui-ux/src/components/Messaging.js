@@ -1,5 +1,6 @@
 import React from "react";
 import './Messaging.css';
+import annekeImage from "../assets/anneke_professional.jpg"
 
 function Messaging() {
   const getCurrentTime = () => {
@@ -11,12 +12,13 @@ function Messaging() {
     <div className="messaging-container">
       {/* Custom Navbar */}
       <div className="messenger-navbar">
-        <a href="/home" className="logo">ripple</a>
+        <h1><a href="/home" className="logo">ripple</a>
+        </h1>
         <ul className="nav-links">
           <li><a href="#messages">messages</a></li>
-          <li><a href="#contacts">interviews</a></li>
-          <li><a href="#groups">tasks</a></li>
-          <li><a href="#settings">history</a></li>
+          <li><a href="#interviews">interviews</a></li>
+          <li><a href="#tasks">tasks</a></li>
+          <li><a href="#history">history</a></li>
         </ul>
         <div className="navbar-bottom">
           <a href="#profile">Profile</a>
@@ -29,21 +31,21 @@ function Messaging() {
         {/* Header */}
         <div className="messaging-header">
           <img
-            src="https://randomuser.me/api/portraits/women/5.jpg"
+            src= { annekeImage }
             alt="User"
             className="profile-picture"
           />
-          <h3 className="username">Sophie Williams</h3>
+          <h3 className="username">Anneke Anderson</h3>
         </div>
 
         {/* Message Window */}
         <div className="message-window">
-          <div className="message received">
+          <div className="message sent">
             <p>Hello! How are you?</p>
             <span className="timestamp">{getCurrentTime()}</span>
           </div>
-          <div className="message sent">
-            <p>I'm good, thank you! What about you?</p>
+          <div className="message received">
+            <p>I'm good, thank you! When are you free for an interview?</p>
             <span className="timestamp">{getCurrentTime()}</span>
           </div>
         </div>
