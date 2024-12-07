@@ -4,23 +4,22 @@ import Navbar from "./Navbar";
 import Card from "./Card";
 import Button from "./Button";
 import "../App.css";
+
 import anikaImage from "../images/Anika.png";
-import sophiaImage from "../images/Sophia.png";
+import sophiaImage from "../images/sophia.png";
 import irisImage from "../images/Iris.png";
-import annekaImage from "../images/Anneka.png";
+import annekeImage from "../images/anneke_professional.jpg";
 import raafayImage from "../images/Raafay.png";
-import radhikaImage from "../images/Radhika.png";
-import jamesImage from "../images/James.png";
-import nagarajImage from "../images/Nagaraj.png";
 
 const App = () => {
   const navigate = useNavigate(); // useNavigate hook for navigation
 
   const [cards, setCards] = useState([
-    { name: "Sophie Williams", role: "UI/UX Designer", image: "https://randomuser.me/api/portraits/women/5.jpg" },
-    { name: "Michael Green", role: "Graphic Designer", image: "https://randomuser.me/api/portraits/men/7.jpg" },
-    { name: "Laura James", role: "Product Designer", image: "https://randomuser.me/api/portraits/women/8.jpg" },
-    { name: "Chris Howard", role: "Web Designer", image: "https://randomuser.me/api/portraits/men/9.jpg" }
+    { name: "Iris Wang", role: "Graphic Designer", image: irisImage },
+    { name: "Raafay Shehzad", role: "Product Designer", image: raafayImage },
+    { name: "Anika Ratakonda", role: "Web Designer", image: anikaImage },
+    { name: "Anneke Anderson", role: "Frontend Developer", image: annekeImage },
+    { name: "Sophia Tran", role: "UI/UX Designer", image: sophiaImage },
   ]);
   
   const [currentIndex, setCurrentIndex] = useState(0);

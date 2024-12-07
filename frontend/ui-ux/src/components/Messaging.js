@@ -1,6 +1,6 @@
 import React from "react";
 import './Messaging.css';
-import annekeImage from "../assets/anneke_professional.jpg"
+import annekeImage from "../images/anneke_professional.jpg"
 
 function Messaging() {
   const getCurrentTime = () => {
