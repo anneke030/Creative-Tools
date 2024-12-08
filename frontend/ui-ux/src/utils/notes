@@ -1,0 +1,25 @@
+{/* Right Section for Profile and Match Info */}
+<div className="right-section">
+{/* Profile Info */}
+<div className="profile-info">
+  <img
+    src={annekeImage}
+    alt="Anneke Anderson"
+    className="small-profile-image"
+  />
+  <span className="profile-name">Anneke Anderson</span>
+</div>
+
+{/* Mini Header */}
+<div className="matched-header">Matched with you</div>
+
+{/* Matched Card */}
+<div className="matched-card">
+  <img
+    src={jamesImage}
+    alt="James Featherson"
+    className="matched-card-image"
+  />
+  <p className="matched-card-name">James Featherson</p>
+</div>
+</div>

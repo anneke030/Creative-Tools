@@ -1,0 +1,207 @@
+/* Main container to wrap both sidebar and main content */
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden;
+}
+
+/* Sidebar (Navbar) */
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  color: white;
+  position: relative;
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Main content section */
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 20px;
+  overflow: auto;
+}
+
+/* Left Section - Card + Buttons */
+.card-section {
+  position: relative;
+  width: 65%;
+  align-content: center;
+}
+
+.card-container {
+  position: relative;
+  align-content: center;
+  justify-items: center;
+}
+
+/* Profile Image Container */
+.profile-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.profile-matching-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+/* Content below profile image */
+.profile-details-container {
+  text-align: center;
+}
+
+.profile-details-container .match-name {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.profile-details-container p {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.checkmark-button, .x-button {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+
+/* Right Section - Profile Info and Matched Card */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  padding: 20px;
+  gap: 15px;
+}
+
+/* Profile Info */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.small-profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+}
+
+/* Matched Card */
+.matched-card {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.matched-card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.matched-card-name {
+  padding: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Action buttons container */
+.actions-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.button-left, .button-right {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+
+/* Right Section - Profile Info and Matched Card */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%; /* Adjust this as needed */
+  padding: 20px;
+  gap: 15px;
+}
+
+/* Profile Info */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.small-profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 1.2rem;
+}
+
+/* Styles for the action buttons container */
+.actions-container {
+  position: absolute;
+  top: 50%;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.button-left, .button-right {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+}
