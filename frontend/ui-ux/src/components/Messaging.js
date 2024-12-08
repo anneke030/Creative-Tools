@@ -1,6 +1,7 @@
 import React from "react";
 import './Messaging.css';
-import annekeImage from "../images/anneke_professional.jpg"
+import anikaImage from "../images/Anika.png";
+import MessagingNavbar from "./Messaging_Navbar"; // Make sure the import path is correct
 
 function Messaging() {
   const getCurrentTime = () => {
@@ -12,18 +13,7 @@ function Messaging() {
     <div className="messaging-container">
       {/* Custom Navbar */}
       <div className="messenger-navbar">
-        <h1><a href="/home" className="logo">ripple</a>
-        </h1>
-        <ul className="nav-links">
-          <li><a href="#messages">messages</a></li>
-          <li><a href="#interviews">interviews</a></li>
-          <li><a href="#tasks">tasks</a></li>
-          <li><a href="#history">history</a></li>
-        </ul>
-        <div className="navbar-bottom">
-          <a href="#profile">Profile</a>
-          <a href="#logout">Logout</a>
-        </div>
+        <MessagingNavbar />
       </div>
 
       {/* Messaging Area */}
@@ -31,11 +21,11 @@ function Messaging() {
         {/* Header */}
         <div className="messaging-header">
           <img
-            src= { annekeImage }
+            src={anikaImage}
             alt="User"
             className="profile-picture"
           />
-          <h3 className="username">Anneke Anderson</h3>
+          <div className="messenger-name">Anika Ratakonda</div>
         </div>
 
         {/* Message Window */}

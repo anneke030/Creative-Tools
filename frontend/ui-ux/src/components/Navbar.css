@@ -2,6 +2,7 @@
   font-family: 'Poppins';
   margin: 0;
 }
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -14,21 +15,6 @@
   height: 100%;
   width: 200px; 
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-}
-.h-navbar {
-  background-color: #E8D7F3; /* Purple background color */
-  color: white;
-  padding: 1.5rem 1rem; /* Increase top/bottom padding to make it thicker */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 75px;
-  margin: 0;
-  z-index: 1000;
-  box-sizing: border-box;
 }
 
 .logo {
@@ -59,7 +45,7 @@
 }
 
 .navbar-center .nav-links {
-  font-size: 20px;
+  font-size: 18px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -96,7 +82,8 @@
 }
 
 .navbar-logos {
-  width: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .home {
@@ -133,6 +120,17 @@
 }
 
 .match {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects a {
+  display: flex;
+  align-items: row;
+  gap: 12px;
+}
+
+.projects {
   display: flex;
   flex-direction: row;
 }

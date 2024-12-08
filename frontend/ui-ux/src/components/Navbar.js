@@ -7,6 +7,7 @@ import search from "../assets/search.png"
 import explore from "../assets/explore.png"
 import match from "../assets/match.png"
 import rewards from "../assets/rewards.png"
+import projects from "../assets/projects.png"
 
 const Navbar = () => {
   return (
@@ -49,11 +50,19 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <div className="rewards">
+            <div className="projects">
+                <Link to="/projects">
+                <img className="navbar-logos" src={projects}/>
+              <div>projects</div></Link>
+              </div>
+            </li>
+            <div className="rewards">
                 <Link to="/rewards">
                 <img className="navbar-logos" src={rewards}/>
               <div>rewards</div></Link>
               </div>
+            <li>
+
             </li>
           </ul>
         </div>

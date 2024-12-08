@@ -1,0 +1,93 @@
+/* Apply global styles and font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: row; /* Layout containers in a row */
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the screen */
+}
+
+.navbar-container {
+  width: 20%; /* Left container takes up 20% of the screen width */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center navbar contents if needed */
+}
+
+.content-container {
+  width: 80%; /* Right container takes up the remaining 80% */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: start;
+  justify-content: center; /* Center content vertically */
+  padding: 20px; /* Add spacing inside the content container */
+}
+
+.description {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  gap: 5px; /* Add spacing between paragraphs */
+  align-items: left; /* Center text horizontally */
+  text-align: left; /* Center align text */
+  padding: 20px;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: #6C63FF; /* Example button color */
+  border-radius: 50%; /* Make it circular */
+  margin-top: 20px; /* Add spacing from the content */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.make {
+  font-size: 60px;
+  font-weight: 500;
+  padding: 0;
+}
+
+.slogan {
+  font-size: 24px;
+  font-weight: 400;
+  color: gray;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 400;
+  color: gray;
+}
+
+.bullets {
+  font-size: 18px;
+  font-weight: 400;
+  color: gray;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.find-out-more-button {
+  width: 60%;
+  margin-top: 20px; /* Add space above the button */
+  padding: 10px 20px; /* Add padding inside the button */
+  font-size: 18px; /* Set font size */
+  font-weight: 500; /* Make the text bold */
+  background-color: #E8D7F3; /* Set the button background color */
+  color: black; /* Set the text color */
+  border: none; /* Remove the default border */
+  border-radius: 50px; /* Add rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Add a smooth hover effect */
+}
+
+.find-out-more-button:hover {
+  background-color: #dec3f0; /* Darken the button color on hover */
+}

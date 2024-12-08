@@ -11,7 +11,7 @@
   width: 250px; /* Fixed width for the sidebar */
   color: white;
   position: relative;
-  padding: 20px;
+  padding: 10px;
   height: 100vh;
 }
 
@@ -22,14 +22,60 @@
   justify-content: space-between;
   padding: 20px;
   overflow: auto;
+  gap: 10px;
 }
 
 /* Left Section - Card + Buttons */
 .card-section {
   position: relative;
   width: 65%;
-  align-content: center;
 }
+
+.matching-header {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+/* Toggle Container */
+.toggle-container {
+  position: relative;
+  width: 53%;
+  font-size: 12px;
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 7px;
+  border: 1px solid rgb(206, 206, 206);
+  border-color: rgb(58, 58, 58);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-option {
+  display: flex;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgb(80, 80, 80);
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-option.active {
+  display: flex;
+  background-color: #dadada;
+  color: rgb(80, 80, 80);
+  border-color: #6c63ff;
+}
+
+.toggle-option:not(.active):hover {
+  display: flex;
+  background-color: #e8e8e8;
+}
+
 
 .card-container {
   position: relative;
@@ -193,4 +239,3 @@
 .button-left, .button-right {
   height: 50px;
 }
-
