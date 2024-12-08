@@ -18,6 +18,7 @@ import jamesImage from "../images/James.png"; // Added import
 
 const App = () => {
   const navigate = useNavigate();
+  const [isClicked, setIsClicked] = useState(false); // State to handle button click animation
 
   const [cards, setCards] = useState([
     { name: "Radhika Patwardhan", role: "UI/UX Designer", pronouns: "she/her", image: radhikaImage },
@@ -31,6 +32,10 @@ const App = () => {
   const [animationDirection, setAnimationDirection] = useState("");
   const [toggleOption, setToggleOption] = useState("people");
 
+  const handleAnimationEnd = () => {
+    setAnimationDirection(""); // Reset animation state
+  };
+
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
     setAnimationDirection("swipe-left");
@@ -41,24 +46,20 @@ const App = () => {
     setAnimationDirection("swipe-right");
   };
 
-  const handleCheck = () => {
-    alert("Profile checked!");
-  };
-
-  const handleReject = () => {
-    alert("Profile rejected!");
-  };
-
-  const handleAnimationEnd = () => {
-    setAnimationDirection("");
-  };
-
   const handleToggle = (option) => {
     setToggleOption(option);
     setCurrentIndex(0);
   };
 
   const currentCard = cards[currentIndex];
+
+  // Handle the button click animation
+  const buttonClick = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      setIsClicked(false);  // Reset after the animation ends
+    }, 300);  // Animation duration (in ms)
+  };
 
   return (
     <div className="app-container">
@@ -90,8 +91,8 @@ const App = () => {
               className={`card-container ${animationDirection}`}
               onAnimationEnd={handleAnimationEnd}
             >
-              <Button onClick={handlePrevious}>
-                <img className="button-left" src={leftArrow} />
+              <Button onClick={() => { buttonClick(); handlePrevious(); }}>
+                <img className={`button-left ${isClicked ? "clicked" : ""}`} src={leftArrow} />
               </Button>
 
               <Card>
@@ -105,15 +106,17 @@ const App = () => {
                     <p className="match-name">{currentCard.name}</p>
                     <p>{currentCard.role}</p>
                     <div className="action-buttons">
-                      <button
-                        className="checkmark-button"
-                        onClick={handleCheck}
-                      >
-                        ✔
-                      </button>
+                      <a href="/messaging">
+                        <button
+                          className="checkmark-button"
+                          onClick={buttonClick}  // Add button click animation for checkmark button
+                        >
+                          ✔
+                        </button>
+                      </a>
                       <button
                         className="x-button"
-                        onClick={handleReject}
+                        onClick={buttonClick}  // Add button click animation for X button
                       >
                         ✖
                       </button>
@@ -121,8 +124,8 @@ const App = () => {
                   </div>
                 </div>
               </Card>
-              <Button onClick={handleNext}>
-                <img className="button-right" src={rightArrow} />
+              <Button onClick={() => { buttonClick(); handleNext(); }}>
+                <img className={`button-right ${isClicked ? "clicked" : ""}`} src={rightArrow} />
               </Button>
             </div>
           )}
@@ -130,21 +133,30 @@ const App = () => {
         </div>
 
         <div className="right-section">
-          <div className="profile-info">
-            <img className="small-profile-image" src={annekeImage} alt="Anneke Anderson" />
+        <div className="profile-info">
+          <img className="small-profile-image" src={annekeImage} alt="Anneke Anderson" />
+          <div className="small-profile-contents">
             <div className="username">@anneke.anderson</div>
-          </div>
-          <div className="matched-header">matched with you</div>
-          <div className="matched-card">
-            <img
-              src={jamesImage}
-              alt="James Featherson"
-              className="matched-card-image"
-            />
-            <p className="matched-card-name">James Featherson</p>
+            <div className="username-profession">Frontend Developer</div>
           </div>
         </div>
+        <div className="matched-header">matched with you</div>
+        <div className="matched-card">
+          <img
+            src={jamesImage}
+            alt="James Featherson"
+            className="matched-card-image"
+          />
+          <p className="matched-card-name">James Featherson</p>
+          <div className="matched-card-info">
+          <p className="matched-card-role">Fullstack Developer</p>
+          <p className="matched-card-pronouns">he/him</p>
+          </div>
+
+        </div>
       </div>
+      </div>
+
     </div>
   );
 };

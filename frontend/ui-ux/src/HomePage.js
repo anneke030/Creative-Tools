@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './HomePage.css';
 import Navbar from './components/Navbar.js';
 
@@ -22,12 +21,11 @@ function HomePage() {
 
            <button className="find-out-more-button">find out more</button>
         </div>
+        
         </div>
 
         {/* Right Container: Image */}
-      <div className="image-container">
 
-        </div>
       </div>
   );
 }

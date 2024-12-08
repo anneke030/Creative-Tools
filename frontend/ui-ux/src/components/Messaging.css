@@ -25,6 +25,8 @@
     color: black; /* Set logo text color to black */
     text-decoration: none;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
     letter-spacing: 2px;
     transition: color 0.3s ease;
 }
@@ -180,3 +182,4 @@
 .send-button:hover {
     background-color: #8a43cc;
 }
+

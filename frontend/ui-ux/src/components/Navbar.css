@@ -173,3 +173,18 @@
 .bottom-link:hover {
   color: #674188;
 }
+
+.navbar-center .nav-links a {
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.navbar-center .nav-links a:hover {
+  transform: scale(1.1); /* Enlarge the link */
+  color: #674188; /* Change text color to purple */
+}
