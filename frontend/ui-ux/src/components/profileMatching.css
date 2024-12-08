@@ -33,8 +33,11 @@
 
 .card-container {
   position: relative;
-  align-content: center;
-  justify-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Profile Image Container */
@@ -144,16 +147,7 @@
   transform: translateY(-50%);
 }
 
-.button-left, .button-right {
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
-  border-radius: 50%;
-  background-color: transparent;
-  color: black;
-  border: 2px solid black;
-  cursor: pointer;
-}
+
 
 
 /* Right Section - Profile Info and Matched Card */
@@ -195,13 +189,8 @@
   transform: translateY(-50%);
 }
 
+
 .button-left, .button-right {
-  width: 50px;
   height: 50px;
-  font-size: 24px;
-  border-radius: 50%;
-  background-color: transparent;
-  color: black;
-  border: 2px solid black;
-  cursor: pointer;
 }
+

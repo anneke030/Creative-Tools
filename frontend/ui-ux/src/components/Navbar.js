@@ -1,48 +1,64 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './Navbar.css';
+import logo from "../assets/logo.png"
+import home from "../assets/home.png"
+import search from "../assets/search.png"
+import explore from "../assets/explore.png"
+import match from "../assets/match.png"
+import rewards from "../assets/rewards.png"
 
 const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-left">
-          <a href="/" className="logo">
-            ripple
-          </a>
-        </div>
+      <div className="navbar-left">
+        <a href="/home" className="navbar-link">
+        <img className="logo" src={logo} alt="Logo" />
+        <div>ripple</div>
+        </a>
+      </div>
         <div className="navbar-center">
           <ul className="nav-links">
             <li>
-              <Link to="/home">home</Link>
+              <div className="home">
+              <Link to="/home">
+              <img className="navbar-logos" src={home}/>
+              <div>home</div></Link>
+              </div>
             </li>
             <li>
-              <Link to="/search">search</Link>
+              <div className="search">
+                <Link to="/search">
+                <img className="navbar-logos" src={search}/>
+                <div>search</div></Link>
+              </div>
             </li>
             <li>
-              <Link to="/explore">explore</Link>
+              <div className="explore">
+                <Link to="/explore">
+                <img className="navbar-logos" src={explore}/>
+                <div>explore</div></Link>
+              </div>
             </li>
             <li>
-              <Link to="/rewards">rewards</Link>
+              <div className="match">
+                  <Link to="/profileMatching">
+                  <img className="navbar-logos" src={match}/>
+                  <div>match</div></Link>
+              </div>
             </li>
             <li>
-              <Link to="/profileMatching">match</Link>
-            </li>
-            <li>
-              <Link to="/about-us">about Us</Link>
+              <div className="rewards">
+                <Link to="/rewards">
+                <img className="navbar-logos" src={rewards}/>
+              <div>rewards</div></Link>
+              </div>
             </li>
           </ul>
         </div>
 
-        {/* New Bottom Navbar Section */}
-        <div className="navbar-bottom">
-          <Link to="/profile" className="bottom-link">
-            Profile
-          </Link>
-          <Link to="/more" className="bottom-link">
-            More
-          </Link>
-        </div>
+        
       </nav>
     </>
   );

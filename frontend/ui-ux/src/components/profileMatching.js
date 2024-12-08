@@ -5,6 +5,9 @@ import Card from "./Card";
 import Button from "./Button";
 import "./profileMatching.css";
 
+import rightArrow from "../assets/right-arrow.png";
+import leftArrow from "../assets/left-arrow.png";
+
 import anikaImage from "../images/Anika.png";
 import sophiaImage from "../images/sophia.png";
 import irisImage from "../images/Iris.png";
@@ -67,6 +70,10 @@ const App = () => {
               className={`card-container ${animationDirection}`}
               onAnimationEnd={handleAnimationEnd}
             >
+            <Button onClick={handlePrevious}>
+            <img className="button-left" src={leftArrow}/>
+            </Button>
+            
               <Card>
                 
                   <div className="profile-details-container">
@@ -96,19 +103,22 @@ const App = () => {
                   </div>
                 </div>
               </Card>
+              <Button onClick={handleNext}>
+              <img className="button-right" src={rightArrow}/>
+            </Button>
             </div>
           )}
           {cards.length <= 0 && <Card>No more profiles</Card>}
 
           {/* Action buttons */}
-          <div className="actions-container">
+          {/* <div className="actions-container">
             <Button className="button-left" onClick={handlePrevious}>
               ←
             </Button>
             <Button className="button-right" onClick={handleNext}>
               →
             </Button>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Section: Profile Info and Matched Card */}

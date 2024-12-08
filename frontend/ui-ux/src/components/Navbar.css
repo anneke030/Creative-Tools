@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 250px; 
+  width: 200px; 
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 .h-navbar {
@@ -30,18 +30,34 @@
   z-index: 1000;
   box-sizing: border-box;
 }
-.navbar-left .logo {
+
+.logo {
+  width: 40px; /* Set an appropriate width for the logo */
+}
+
+.navbar-left {
+  background-color: #E8D7F3;
+  display: flex; /* Ensure navbar-left items are in a row */
+  flex-direction: row;
+  align-items: center; /* Vertically align items in navbar-left */
+  width: 100%;
+  margin: 20px;
+  margin-left: 0px;
+}
+
+.navbar-link {
+  display: flex; /* Make the <a> element a flex container */
+  align-items: center; /* Vertically align the image and text */
   font-size: 36px;
   font-weight: 500;
   color: black;
-  text-decoration: none;
+  text-decoration: none; /* Remove underline from the link */
   padding: 10px;
-  line-height: 88px;
+  line-height: 1.2; /* Adjust spacing inside the link */
+  gap: 10px; /* Add space between the logo and text */
   background-color: #E8D7F3;
 }
-.navbar-left {
-   background-color: #E8D7F3;
-}
+
 .navbar-center .nav-links {
   font-size: 20px;
   list-style-type: none;
@@ -49,7 +65,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-   background-color: #E8D7F3;
+  background-color: #E8D7F3;
 }
 .navbar-center .nav-links li {
   margin-bottom: 1rem;
@@ -62,6 +78,7 @@
   padding: 0.5rem;
   background-color:transparent;
 }
+
 .navbar-right {
   display: flex;
   flex-direction: column;
@@ -77,31 +94,66 @@
   margin-left: 1rem;
   position: relative;
 }
-.navbar-right .cart-count {
-  background-color: #674188;
-  color: #E8D7F3;
-  border-radius: 50%;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.8rem;
-  position: absolute;
-  top: -0.5rem;
-  right: -0.5rem;
+
+.navbar-logos {
+  width: 30px;
 }
 
-.navbar {
+.home {
   display: flex;
-  flex-direction: column;
-  background-color: #E8D7F3;
-  align-items: flex-start;
-  padding: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 250px; 
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  justify-content: space-between; /* Ensures bottom links are at the bottom */
+  flex-direction: row;
 }
+
+.home a {
+  display: flex;
+  align-items: row;
+  gap: 12px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
+.search a {
+  display: flex;
+  align-items: row;
+  gap: 12px;
+}
+
+.explore {
+  display: flex;
+  flex-direction: row;
+}
+
+.explore a {
+  display: flex;
+  align-items: row;
+  gap: 12px;
+}
+
+.match {
+  display: flex;
+  flex-direction: row;
+}
+
+.match a {
+  display: flex;
+  align-items: row;
+  gap: 12px;
+}
+
+.rewards {
+  display: flex;
+  flex-direction: row;
+}
+
+.rewards a {
+  display: flex;
+  align-items: row;
+  gap: 12px;
+}
+
 
 .navbar-bottom {
   display: flex;
