@@ -1,6 +1,6 @@
 import React from "react";
 import './Messaging.css';
-import anikaImage from "../images/Anika.png";
+import raafayImage from "../images/Raafay.png";
 import MessagingNavbar from "./Messaging_Navbar"; // Make sure the import path is correct
 
 function Messaging() {
@@ -21,11 +21,11 @@ function Messaging() {
         {/* Header */}
         <div className="messaging-header">
           <img
-            src={anikaImage}
+            src={raafayImage}
             alt="User"
             className="profile-picture"
           />
-          <div className="messenger-name">Anika Ratakonda</div>
+          <div className="messenger-name">Raafay Shehzad</div>
         </div>
 
         {/* Message Window */}

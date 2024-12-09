@@ -25,42 +25,52 @@
   gap: 10px;
 }
 
+.matched-card-pronouns {
+  font-size: 0.7rem;
+  color: #555;
+}
+
 /* Left Section - Card + Buttons */
 .card-section {
   position: relative;
-  width: 65%;
+  width: 75%; /* Increased width to take more space */
+  padding: 10px; /* Added more padding for a larger appearance */
+  align-items: center;
 }
 
 .matching-header {
   font-size: 45px;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 /* Toggle Container */
 .toggle-container {
   position: relative;
-  width: 53%;
-  font-size: 12px;
+  width: 57%;
+  font-size: 7px;
   display: flex;
   justify-items: center;
   align-content: center;
   gap: 10px;
   margin-bottom: 20px;
-  padding: 7px;
+  padding: 5px;
   border: 1px solid rgb(206, 206, 206);
   border-color: rgb(58, 58, 58);
-  border-radius: 20px;
+  border-radius: 30px;
   align-items: center;
   justify-content: center;
+  margin-left: 110px;
 }
 
 .toggle-option {
   display: flex;
-  padding: 10px 20px;
+  padding: 10px 10px;
   font-weight: 500;
   cursor: pointer;
   color: rgb(80, 80, 80);
   border-radius: 20px;
+  font-size: 1rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -76,109 +86,58 @@
   background-color: #e8e8e8;
 }
 
-
 .card-container {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: row;  /* Horizontal alignment for the image and text */
+  align-items: center;  /* Vertically center the image and text */
+  justify-content: flex-start; /* Align items to the left */
+  margin-left: 75px;
+}
+
+.profile-matching-image {
+  width: 130px;
+  height: 130px;
+  margin-left: 110px;
+  border-radius: 50%;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-
 }
-
-/* Profile Image Container */
-.profile-image-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-
 
 /* Content below profile image */
 .profile-details-container {
-  text-align: center;
-}
-
-#photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  text-align: left;
+  align-items: center;
+  width: 90%;
 }
 
 .profile-details-container .match-name {
-  font-size: 1.5rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .profile-details-container p {
-  font-size: 1rem;
+  font-size: 15px;
   color: black;
+  margin-bottom: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .checkmark-button, .x-button {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   font-size: 20px;
   background-color: transparent;
   border-radius: 50%;
   border: 1.5px solid black;
   cursor: pointer;
-}
-
-.title {
-  font-weight: 500;
-}
-/* Skills Section */
-.skills-section {
-  margin-top: 10px;
-  text-align: left;
-  color: #333;
-}
-
-
-.skills-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skills-section ul li {
-  font-size: 0.9rem;
-  color: #333333;
-  margin-bottom: 5px;
-}
-.card-add-info {
-  text-align: center;
-  padding: 10px;
-  padding-top: 0px;
-  width: 100%;
-  font-size: 12px;
-}
-
-.skills-section ul li {
-  display: inline-block; /* Light gray background */
-  color: #333; /* Dark text color */
-  border-radius: 15px; /* Rounded borders */
-  padding: 3px 7px; /* Padding inside each skill */
-  margin: 5px; /* Spacing between skills */
-  font-size: 12px;
-  border: 1px solid #444444; /* Optional border for definition */
-}
-
-
-/* Background Section */
-.background-section {
-  margin-top: 10px;
-  text-align: left;
-}
-
-.background-section p {
-  font-size: 12px;
-  color: #333;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Right Section - Profile Info and Matched Card */
@@ -223,7 +182,6 @@
   gap: 15px;
 }
 
-
 .matched-card-image {
   width: 150px;
   height: 150px;
@@ -248,12 +206,6 @@
   color: black;
 }
 
-.matched-card-pronouns {
-  font-size: 0.7rem;
-  color: #555;
-}
-
-
 
 /* Action buttons container */
 .actions-container {
@@ -264,9 +216,6 @@
   justify-content: space-between;
   transform: translateY(-50%);
 }
-
-
-
 
 /* Right Section - Profile Info and Matched Card */
 .right-section {
@@ -303,33 +252,28 @@
 }
 
 
+/* Styles for the action buttons container */
+.actions-container {
+  position: absolute;
+  top: 50%;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
 
 .button-left, .button-right {
   height: 50px;
-}
-
-.options {
-  width: 25px;
-  height: 25px;
-}
-.action-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px; /* Adds some spacing above the buttons */
 }
 
 .checkmark-button, .x-button {
   width: 40px;
   height: 40px;
   font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: transparent;
   border-radius: 50%;
-  border: 1.5px solid rgb(33, 33, 33);
+  border: 1.5px solid rgb(64, 64, 64);
   cursor: pointer;
   transition: transform 0.3s, color 0.3s, border 0.3s;
 }
@@ -340,9 +284,36 @@
   border-color: #674188;
 }
 
-
 .button-click {
   transform: scale(0.9);
   transition: transform 0.1s ease;
 }
 
+.skill-tag {
+  display: inline-block;
+  color: #333;
+  border-radius: 15px;
+  border: 1px solid rgb(53, 53, 53);
+  padding: 3px 6px;
+  margin: 5px 5px 0 0;
+  font-size: 10px;
+}
+
+.skills {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.experience {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.options {
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+}
