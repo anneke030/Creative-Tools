@@ -24,6 +24,7 @@
   font-size: 40px;
   margin: 20px;
   margin-bottom: 30px;
+  font-weight: 500;
 }
 
 /* Calendar Section */
@@ -91,4 +92,8 @@
 
 .time-block.booked .status {
   display: none; /* Hide "Available" when booked */
+}
+
+.booked {
+  font-weight: 500;
 }

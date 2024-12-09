@@ -46,7 +46,8 @@ function Interviews() {
             >
               <p>{block.date} - {block.time}</p>
               {block.booked ? (
-                <div className="profile-container">
+                <div className="profile-container"> 
+                <div className="booked">Booked!</div>
                   <img src={raafay.profileImage} alt={`${raafay.name}'s profile`} className="profile-image" />
                   <span className="profile-name">{raafay.name}</span>
                 </div>

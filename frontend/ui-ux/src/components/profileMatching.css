@@ -128,17 +128,7 @@
   gap: 20px;
 }
 
-.checkmark-button, .x-button {
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  background-color: transparent;
-  border-radius: 50%;
-  border: 1.5px solid black;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-}
+
 
 /* Right Section - Profile Info and Matched Card */
 .right-section {
@@ -273,7 +263,7 @@
   font-size: 20px;
   background-color: transparent;
   border-radius: 50%;
-  border: 1.5px solid rgb(64, 64, 64);
+  border: 0px;
   cursor: pointer;
   transition: transform 0.3s, color 0.3s, border 0.3s;
 }
@@ -281,7 +271,6 @@
 .checkmark-button:hover, .x-button:hover {
   transform: scale(1.2); /* Enlarges the button */
   color: #674188; /* Matches glow color */
-  border-color: #674188;
 }
 
 .button-click {
@@ -312,8 +301,8 @@
 }
 
 .options {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   justify-content: center;
   align-items: center;
 }

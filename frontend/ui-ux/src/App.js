@@ -8,6 +8,7 @@ import Explore from './components/Explore';
 import Messaging from './components/Messaging';
 import Interviews from './components/Interviews';
 import Tasks from './components/Tasks';
+import History from './components/History';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
               <Route path="/messaging" element={<Messaging />} />
               <Route path="/interviews" element={<Interviews />} />
               <Route path="/tasks" element={<Tasks />} />
+              <Route path="/history" element={<History />} />
           </Routes>
       </Router>
   );
