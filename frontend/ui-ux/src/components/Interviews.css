@@ -1,164 +1,29 @@
 /* Container Styles */
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .interviews-container {
-    display: flex;
-    height: 100vh;
-    background-color: #F8F8F8;
+  display: flex;
+  height: 100vh;
+  background-color: #F8F8F8;
+  justify-content: flex-end; /* Align children to the right */
 }
-
-* {
-    font-family: 'Poppins';
-    margin: 0;
-  }
-  
-  .m-navbar {
-    display: flex;
-    flex-direction: column;
-    background-color: #E8D7F3;
-    align-items: flex-start;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200px; 
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  }
-  
-  .logo {
-    width: 40px; /* Set an appropriate width for the logo */
-  }
-  
-  .m-navbar-left {
-    background-color: #E8D7F3;
-    display: flex; /* Ensure navbar-left items are in a row */
-    flex-direction: row;
-    align-items: center; /* Vertically align items in navbar-left */
-    width: 100%;
-    margin: 20px;
-    margin-left: 0px;
-  }
-  
-  .m-navbar-link {
-    display: flex; /* Make the <a> element a flex container */
-    align-items: center; /* Vertically align the image and text */
-    font-size: 36px;
-    font-weight: 500;
-    color: black;
-    text-decoration: none; /* Remove underline from the link */
-    padding: 10px;
-    line-height: 1.2; /* Adjust spacing inside the link */
-    gap: 10px; /* Add space between the logo and text */
-    background-color: #E8D7F3;
-  }
-  
-  .m-navbar-center .m-nav-links {
-    font-size: 18px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background-color: #E8D7F3;
-  }
-  .m-navbar-center .m-nav-links li {
-    margin-bottom: 1rem;
-     background-color: #E8D7F3;
-  }
-  .m-navbar-center .m-nav-links a {
-    background-color: #E8D7F3;
-    color: black;
-    text-decoration: none;
-    padding: 0.5rem;
-    background-color:transparent;
-  }
-
-  .m-nav-links {
-    background-color:transparent;
-  }
-  
-  .m-navbar-logos {
-    width: 25px;
-    height: 25px;
-  }
-  
-  .messaging {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .messaging a {
-    display: flex;
-    align-items: row;
-    gap: 12px;
-  }
-  
-  .interviews {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .interviews a {
-    display: flex;
-    align-items: row;
-    gap: 12px;
-  }
-  
-  .tasks {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .tasks a {
-    display: flex;
-    align-items: row;
-    gap: 12px;
-  }
-  
-  .history {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .history a {
-    display: flex;
-    align-items: row;
-    gap: 12px;
-  }
-  
-  
-  .m-navbar-center .m-nav-links a {
-    background-color: transparent;
-    color: black;
-    text-decoration: none;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  }
-  
-  .m-navbar-center .m-nav-links a:hover {
-    transform: scale(1.1); /* Enlarge the link */
-    color: #674188; /* Change text color to purple */
-  }
-  
 
 /* Main Interviews Area */
 .interviews-main {
-    width: 80%;
-    padding: 2rem;
-    background-color: #FFFFFF;
+  width: 80%; /* Adjust width as needed */
+  max-width: 950px; /* Optional: Restrict maximum width */
+  padding: 2rem;
+  background-color: #FFFFFF;
+  margin-right: 1rem; /* Add space from the right edge */
+  border-radius: 10px; /* Optional: Rounded corners */
 }
 
-/* Header */
 .interviews-header {
-    text-align: center;
-    padding-bottom: 2rem;
-    font-size: 24px;
-    color: #674188;
+  font-size: 40px;
+  margin: 20px;
+  margin-bottom: 30px;
 }
 
 /* Calendar Section */
@@ -202,4 +67,28 @@
 
 .time-block.booked:hover {
     background-color: #9753d8; /* No hover effect for booked slots */
+}
+
+.time-block .profile-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.time-block .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.time-block .profile-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff; /* Adjust for better visibility on the booked background */
+}
+
+.time-block.booked .status {
+  display: none; /* Hide "Available" when booked */
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './Interviews.css';
 import MessagingNavbar from "./Messaging_Navbar"; // Reusing the Messaging Navbar
+import raafayImage from "../images/Raafay.png"
 
 function Interviews() {
   const [timeBlocks, setTimeBlocks] = useState([
@@ -10,6 +11,11 @@ function Interviews() {
     { date: "2024-12-09", time: "11:00 AM", booked: false },
     { date: "2024-12-09", time: "01:00 PM", booked: false },
   ]);
+
+  const raafay = {
+    name: "Raafay Shehzad",
+    profileImage: raafayImage
+  };
 
   const toggleBooking = (index) => {
     const updatedBlocks = [...timeBlocks];
@@ -39,7 +45,14 @@ function Interviews() {
               onClick={() => toggleBooking(index)}
             >
               <p>{block.date} - {block.time}</p>
-              <span className="status">{block.booked ? "Booked" : "Available"}</span>
+              {block.booked ? (
+                <div className="profile-container">
+                  <img src={raafay.profileImage} alt={`${raafay.name}'s profile`} className="profile-image" />
+                  <span className="profile-name">{raafay.name}</span>
+                </div>
+              ) : (
+                <span className="status">Available</span>
+              )}
             </div>
           ))}
         </div>
