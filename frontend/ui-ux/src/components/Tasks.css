@@ -1,199 +1,78 @@
-/* Container Styles */
-* {
-    font-family: 'Poppins', sans-serif;
-}
-
-.interviews-container {
-    display: flex;
-    height: 100vh;
-    background-color: #F8F8F8;
-}
-
-* {
-    font-family: 'Poppins';
-    margin: 0;
-  }
-  
-  .m-navbar {
-    display: flex;
-    flex-direction: column;
-    background-color: #E8D7F3;
-    align-items: flex-start;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200px; 
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  }
-  
-  .logo {
-    width: 40px; /* Set an appropriate width for the logo */
-  }
-  
-  .m-navbar-left {
-    background-color: #E8D7F3;
-    display: flex; /* Ensure navbar-left items are in a row */
-    flex-direction: row;
-    align-items: center; /* Vertically align items in navbar-left */
-    width: 100%;
-    margin: 20px;
-    margin-left: 0px;
-  }
-  
-  .m-navbar-link {
-    display: flex; /* Make the <a> element a flex container */
-    align-items: center; /* Vertically align the image and text */
-    font-size: 36px;
-    font-weight: 500;
-    color: black;
-    text-decoration: none; /* Remove underline from the link */
-    padding: 10px;
-    line-height: 1.2; /* Adjust spacing inside the link */
-    gap: 10px; /* Add space between the logo and text */
-    background-color: #E8D7F3;
-  }
-  
-  .m-navbar-center .m-nav-links {
-    font-size: 18px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background-color: #E8D7F3;
-  }
-  .m-navbar-center .m-nav-links li {
-    margin-bottom: 1rem;
-     background-color: #E8D7F3;
-  }
-  .m-navbar-center .m-nav-links a {
-    background-color: #E8D7F3;
-    color: black;
-    text-decoration: none;
-    padding: 0.5rem;
-    background-color:transparent;
-  }
-
-  .m-nav-links {
-    background-color:transparent;
-  }
-  
-  .m-navbar-logos {
-    width: 25px;
-    height: 25px;
-  }
-  
-  .messaging {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .messaging a {
-    display: flex;
-    align-items: row;
-    gap: 12px;
-  }
-  
-  .interviews {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .interviews a {
-    display: flex;
-    align-items: row;
-    gap: 12px;
-  }
-  
-  .tasks {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .tasks a {
-    display: flex;
-    align-items: row;
-    gap: 12px;
-  }
-  
-  .history {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .history a {
-    display: flex;
-    align-items: row;
-    gap: 12px;
-  }
-  
-  
-  .m-navbar-center .m-nav-links a {
-    background-color: transparent;
-    color: black;
-    text-decoration: none;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  }
-  
-  .m-navbar-center .m-nav-links a:hover {
-    transform: scale(1.1); /* Enlarge the link */
-    color: #674188; /* Change text color to purple */
-  }
-  
-
-
 /* Main Tasks Area */
 .tasks-main {
-    width: 80%;
-    padding: 2rem;
-    background-color: #FFFFFF;
+  width: 80%; /* Adjust width as needed */
+  max-width: 950px; /* Optional: Restrict maximum width */
+  padding: 2rem;
+  background-color: #FFFFFF;
+  margin-right: 1rem; /* Add space from the right edge */
+  border-radius: 10px; /* Optional: Rounded corners */
+  margin-top: 0px;
+}
+
+.tasks-title {
+  font-size: 40px;
+  margin: 20px;
+  margin-bottom: 0px;
+
+}
+
+.tasks-container {
+  display: flex;
+  height: 100vh;
+  background-color: #F8F8F8;
+  justify-content: flex-end; /* Align children to the right */
+  margin-top: 0px;
 }
 
 /* Header */
 .tasks-header {
-    text-align: center;
-    padding-bottom: 2rem;
-    font-size: 24px;
-    color: #674188;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 24px;
+  color: #674188;
 }
 
 /* Task List */
 .task-list {
     margin-bottom: 2rem;
+    margin: 20px;
 }
 
-.task-list h3 {
-    font-size: 20px;
-    color: #674188;
+.subtitle {
+  color: rgb(36, 36, 36);
+  font-size: 30px;
+  text-align: left;
 }
 
 .task {
-    background-color: #E8D7F3;
     padding: 1rem;
     border-radius: 8px;
     cursor: pointer;
     margin: 1rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     transition: background-color 0.3s ease;
 }
 
 .task.completed {
-    background-color: #B8E986;
+    background-color:  #9753d8;
 }
 
 .task.pending {
-    background-color: #F8D7D7;
+    padding: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+    border: 2px solid rgb(67, 67, 67);
 }
 
 .task .status {
     font-weight: 600;
     color: #674188;
+    margin-left: 10px;
 }
 
 .task:hover {
@@ -201,26 +80,52 @@
 }
 
 /* Feedback Section */
+/* Feedback Section */
 .feedback-section {
-    margin-top: 2rem;
+  margin-top: 2rem;
+  margin: 20px;
 }
 
-.feedback-section h3 {
-    font-size: 20px;
-    color: #674188;
+.feedback-content {
+  display: flex;
+  flex-direction: column;
+  text-align: right; /* Align text to the right */
+  flex: 1; /* Takes remaining space */
 }
 
 .feedback-item {
-    background-color: #E8D7F3;
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 1rem 0;
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  transition: background-color 0.3s ease;
+  border: 2px solid rgb(67, 67, 67);
+  background-color: #E8D7F3;
 }
 
-.feedback-item h4 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #674188;
+.feedback-item:hover {
+  background-color: #D4B0FF; /* Matches the hover effect of to-do tasks */
+}
+.feedback-image {
+  width: 50px; /* Profile image size */
+  height: 50px;
+  border-radius: 50%; /* Makes the image circular */
+  margin-right: 1rem; /* Space between image and content */
+  border: 2px solid #674188; /* Optional: Adds a border around the image */
+}
+
+.feedback-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(36, 36, 36);
+}
+
+.feedback-comments {
+  font-size: 16px;
+  color: #674188;
+  margin-top: 5px;
 }
 
 .feedback-item p {
