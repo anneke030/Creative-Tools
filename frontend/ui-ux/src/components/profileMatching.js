@@ -7,6 +7,8 @@ import "./profileMatching.css";
 
 import rightArrow from "../assets/right-arrow.png";
 import leftArrow from "../assets/left-arrow.png";
+import x from "../assets/x.png";
+import check from "../assets/check.png";
 
 import anikaImage from "../images/Anika.png";
 import sophiaImage from "../images/sophia.png";
@@ -21,13 +23,48 @@ const App = () => {
   const [isClicked, setIsClicked] = useState(false); // State to handle button click animation
 
   const [cards, setCards] = useState([
-    { name: "Radhika Patwardhan", role: "UI/UX Designer", pronouns: "she/her", image: radhikaImage },
-    { name: "Sophia Tran", role: "Frontend Developer", pronouns: "she/her", image: sophiaImage },
-    { name: "Iris Wang", role: "Graphic Designer", pronouns: "she/her", image: irisImage },
-    { name: "Anika Ratakonda", role: "Financial Advisor", pronouns: "she/her", image: anikaImage },
-    { name: "Raafay Shehzad", role: "Tech Consultant", pronouns: "he/him", image: raafayImage },
+    { 
+      name: "Radhika Patwardhan", 
+      role: "UI/UX Designer", 
+      pronouns: "she/her", 
+      image: radhikaImage, 
+      skills: ["wireframing", "prototyping"], 
+      background: "startups/enterprise design" 
+    },
+    { 
+      name: "Sophia Tran", 
+      role: "Frontend Developer", 
+      pronouns: "she/her", 
+      image: sophiaImage, 
+      skills: ["React", "CSS", "JavaScript"], 
+      background: "web development" 
+    },
+    { 
+      name: "Iris Wang", 
+      role: "Graphic Designer", 
+      pronouns: "she/her", 
+      image: irisImage, 
+      skills: ["Adobe Illustrator", "branding"], 
+      background: "web design" 
+    },
+    { 
+      name: "Anika Ratakonda", 
+      role: "Financial Advisor", 
+      pronouns: "she/her", 
+      image: anikaImage, 
+      skills: ["budgeting", "investments"], 
+      background: "personal finance, accounting" 
+    },
+    { 
+      name: "Raafay Shehzad", 
+      role: "Tech Consultant", 
+      pronouns: "he/him", 
+      image: raafayImage, 
+      skills: ["cloud computing", "DevOps"], 
+      background: "e-Commerce, AI" 
+    },
   ]);
-
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animationDirection, setAnimationDirection] = useState("");
   const [toggleOption, setToggleOption] = useState("people");
@@ -96,33 +133,47 @@ const App = () => {
               </Button>
 
               <Card>
-                <div className="profile-details-container">
-                  <div className="card-content">
-                    <img
-                      src={currentCard.image}
-                      alt={currentCard.name}
-                      className="profile-matching-image"
-                    />
-                    <p className="match-name">{currentCard.name}</p>
-                    <p>{currentCard.role}</p>
-                    <div className="action-buttons">
-                      <a href="/messaging">
-                        <button
-                          className="checkmark-button"
-                          onClick={buttonClick}  // Add button click animation for checkmark button
-                        >
-                          ✔
-                        </button>
-                      </a>
-                      <button
-                        className="x-button"
-                        onClick={buttonClick}  // Add button click animation for X button
-                      >
-                        ✖
-                      </button>
-                    </div>
-                  </div>
-                </div>
+              <div className="profile-details-container">
+  <div className="card-content">
+    <img
+      src={currentCard.image}
+      alt={currentCard.name}
+      id="photo"
+    />
+    <p className="match-name">{currentCard.name}</p>
+    <p>{currentCard.role}</p>
+    <div className="card-add-info">
+      <div className="skills-section">
+        <ul><div className="title">skills: </div>
+          {currentCard.skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="background-section">
+        <p><div className="title">background: </div></p>
+        <p>{currentCard.background}</p>
+      </div>
+    </div>
+    <div className="action-buttons">
+      <a href="/messaging">
+        <button
+          className="checkmark-button"
+          onClick={buttonClick} // Add button click animation for checkmark button
+        >
+          <img className="options" src={check}/>
+        </button>
+      </a>
+      <button
+        className="x-button"
+        onClick={buttonClick} // Add button click animation for X button
+      >
+        <img className="options" src={x}/>
+      </button>
+    </div>
+  </div>
+</div>
+
               </Card>
               <Button onClick={() => { buttonClick(); handleNext(); }}>
                 <img className={`button-right ${isClicked ? "clicked" : ""}`} src={rightArrow} />
@@ -137,7 +188,7 @@ const App = () => {
           <img className="small-profile-image" src={annekeImage} alt="Anneke Anderson" />
           <div className="small-profile-contents">
             <div className="username">@anneke.anderson</div>
-            <div className="username-profession">Frontend Developer</div>
+            <div className="username-profession">UI/UX Designer</div>
           </div>
         </div>
         <div className="matched-header">matched with you</div>

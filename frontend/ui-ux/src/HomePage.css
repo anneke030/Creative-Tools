@@ -7,13 +7,17 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-
 .homepage-container {
   display: flex;
-  flex-direction: row; /* Layout containers in a row */
+  flex-direction: row;
   height: 100vh; /* Full height of the viewport */
   width: 100%; /* Full width of the screen */
+  background-image: url('./assets/decor.png'); /* Replace with the correct path */
+  background-size: cover; /* Make sure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
 }
+
 
 .navbar-container {
   width: 20%; /* Left container takes up 20% of the screen width */

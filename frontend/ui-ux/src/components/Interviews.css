@@ -3,147 +3,203 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.tasks-container {
+.interviews-container {
     display: flex;
     height: 100vh;
     background-color: #F8F8F8;
 }
 
-/* Navbar Styles */
-.tasks-navbar {
-    width: 20%;
-    background: #e8d7f3;
+* {
+    font-family: 'Poppins';
+    margin: 0;
+  }
+  
+  .m-navbar {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.tasks-navbar .logo {
-    font-size: 28px;
+    background-color: #E8D7F3;
+    align-items: flex-start;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px; 
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+    width: 40px; /* Set an appropriate width for the logo */
+  }
+  
+  .m-navbar-left {
+    background-color: #E8D7F3;
+    display: flex; /* Ensure navbar-left items are in a row */
+    flex-direction: row;
+    align-items: center; /* Vertically align items in navbar-left */
+    width: 100%;
+    margin: 20px;
+    margin-left: 0px;
+  }
+  
+  .m-navbar-link {
+    display: flex; /* Make the <a> element a flex container */
+    align-items: center; /* Vertically align the image and text */
+    font-size: 36px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none; /* Remove underline from the link */
+    padding: 10px;
+    line-height: 1.2; /* Adjust spacing inside the link */
+    gap: 10px; /* Add space between the logo and text */
+    background-color: #E8D7F3;
+  }
+  
+  .m-navbar-center .m-nav-links {
+    font-size: 18px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #E8D7F3;
+  }
+  .m-navbar-center .m-nav-links li {
+    margin-bottom: 1rem;
+     background-color: #E8D7F3;
+  }
+  .m-navbar-center .m-nav-links a {
+    background-color: #E8D7F3;
     color: black;
     text-decoration: none;
-    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background-color:transparent;
+  }
+
+  .m-nav-links {
+    background-color:transparent;
+  }
+  
+  .m-navbar-logos {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .messaging {
     display: flex;
     flex-direction: row;
-    letter-spacing: 2px;
-    transition: color 0.3s ease;
-}
-
-.tasks-navbar .logo:hover {
-    color: #674188;
-}
-
-.tasks-navbar .nav-links {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1rem;
-}
-
-.tasks-navbar .nav-links li {
-    margin-bottom: 1rem;
-}
-
-.tasks-navbar .nav-links a {
-    text-decoration: none;
+  }
+  
+  .messaging a {
+    display: flex;
+    align-items: row;
+    gap: 12px;
+  }
+  
+  .interviews {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .interviews a {
+    display: flex;
+    align-items: row;
+    gap: 12px;
+  }
+  
+  .tasks {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .tasks a {
+    display: flex;
+    align-items: row;
+    gap: 12px;
+  }
+  
+  .history {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .history a {
+    display: flex;
+    align-items: row;
+    gap: 12px;
+  }
+  
+  
+  .m-navbar-center .m-nav-links a {
+    background-color: transparent;
     color: black;
-    font-size: 18px;
-    font-weight: 500;
-    display: block;
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+    text-decoration: none;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  .m-navbar-center .m-nav-links a:hover {
+    transform: scale(1.1); /* Enlarge the link */
+    color: #674188; /* Change text color to purple */
+  }
+  
 
-.tasks-navbar .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #674188;
-}
-
-/* Main Tasks Area */
-.tasks-main {
+/* Main Interviews Area */
+.interviews-main {
     width: 80%;
     padding: 2rem;
     background-color: #FFFFFF;
 }
 
 /* Header */
-.tasks-header {
+.interviews-header {
     text-align: center;
     padding-bottom: 2rem;
     font-size: 24px;
     color: #674188;
+}
+
+/* Calendar Section */
+.calendar {
     display: flex;
-    flex-direction: row; /* Changed to row to make tasks and feedback appear next to each other */
-    gap: 10px;
-    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-/* Task List */
-.task-list {
-    width: 48%; /* Each section takes up about half of the available space */
-    margin-bottom: 2rem;
-}
-
-.task-list h3 {
-    font-size: 20px;
-    color: #674188;
-}
-
-.task {
+.time-block {
     background-color: #E8D7F3;
     padding: 1rem;
     border-radius: 8px;
     cursor: pointer;
-    margin: 1rem 0;
-    display: flex;
-    justify-content: space-between;
     transition: background-color 0.3s ease;
 }
 
-.task.completed {
-    background-color: #B8E986;
+.time-block p {
+    margin: 0;
+    font-size: 16px;
 }
 
-.task.pending {
-    background-color: #F8D7D7;
+.time-block .status {
+    font-size: 14px;
+    font-weight: 500;
 }
 
-.task .status {
-    font-weight: 600;
-    color: #674188;
-}
-
-.task:hover {
+.time-block:hover {
     background-color: #D4B0FF;
 }
 
-/* Feedback Section */
-.feedback-section {
-    width: 48%; /* Each section takes up about half of the available space */
-    margin-top: 2rem;
+.time-block.available:hover {
+    background-color: #D4B0FF;
 }
 
-.feedback-section h3 {
-    font-size: 20px;
-    color: #674188;
+.time-block.booked {
+    background-color: #9753d8;
+    color: white;
+    pointer-events: none;
 }
 
-.feedback-item {
-    background-color: #E8D7F3;
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 1rem 0;
-}
-
-.feedback-item h4 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #674188;
-}
-
-.feedback-item p {
-    font-size: 16px;
-    color: #333;
+.time-block.booked:hover {
+    background-color: #9753d8; /* No hover effect for booked slots */
 }
