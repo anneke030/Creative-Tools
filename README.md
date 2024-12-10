@@ -12,7 +12,7 @@
   <li>reused components such as Navbar and matching cards</li>
   <li>allowed for webpage routing using JavaScript's onClick command</li>
 </ul>
-<h4>Backend</h4>
+<h4>Backend:</h4>
 <h5>ExpressJS</h5>
 <ul>
   <li>used for custom built APIs</li>
