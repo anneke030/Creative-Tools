@@ -1,6 +1,9 @@
 <h1>Ripple</h1>
 <p>Ripple is a user interview platform tailored for UI/UX designers, offering seamless designer-interviewee matching and a curated pool of committed participants. It enables continuous feedback throughout the product development journey, streamlining the design process.</p>
 
+<h3>Our Team:</h3>
+<p>Anika Ratakonda - Product, Raafay Shehzad - Product, Sophia Tran - Tech, Anneke Anderson - Tech, James Featherston - Tech, Nagaraj Veerappan- Tech, Iris Wang - Design, Radhika Patwardhan - Design</p>
+
 <h2>What Our Product Does</h2>
 <p>Ripple is a web application that facilitates connections between designers and participants for UI/UX interviews. It provides the following features:</p>
     <ul>
